@@ -54,7 +54,9 @@ class App extends Component {
             <div className='app'>
                 <h1>Weather</h1>
                 <div className={`container-weather ${toggleWidget && 'open-container'}`}>
-                    <Weather />
+                    <Weather 
+                        isLoading={this.state.isLoading}
+                    />
                     <WidgetSwitch
                         toggleWidget={toggleWidget}
                         handleSwitch={this.handleSwitchOnOff}
