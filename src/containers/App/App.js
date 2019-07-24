@@ -8,9 +8,38 @@ import WidgetSwitch from '../../components/WidgetSwitch/WidgetSwitch';
 import './App.scss';
 
 class App extends Component {
+    todayDate = new Date().toISOString().slice(0, 10);
+
     state = {
-        toggleWidget: true,
+        toggleWidget: false,
+        actualDate: this.todayDate,
+        actualCity: 1,
+        isLoading: true,
+        error: null,
     }
+
+    componentDidMount() {
+        fetch(`http://dev-weather-api.azurewebsites.net/api/city/${this.state.actualCity}/weather?date=${this.state.actualDate}`)
+            .then(res => {
+                if (res.ok) {
+                    return res;
+                }
+                throw Error('Not work');
+            })
+            .then(res => res.json())
+            .then(data => {
+                this.setState({
+                    isLoading: false,
+                })
+            })
+            .catch(error => {
+                this.setState(prevState => ({
+                    error,
+                }))
+            })
+            console.log(this.state.actualDate)
+
+    };
 
     handleSwitchOnOff = () => {
 
