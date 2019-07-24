@@ -9,18 +9,26 @@ import './App.scss';
 
 class App extends Component {
     state = {
-        toggleWidget: false,
+        toggleWidget: true,
     }
 
-    render() {
+    handleSwitchOnOff = () => {
 
+        this.setState({
+            toggleWidget: !this.state.toggleWidget
+        })
+    };
+
+    render() {
+        const { toggleWidget } = this.state;
         return (
-            <div className='App'>
+            <div className='app'>
                 <h1>Weather</h1>
-                <div className='container-weather'>
+                <div className={`container-weather ${toggleWidget && 'open-container'}`}>
                     <Weather />
                     <WidgetSwitch
-                        toggleWidget={this.state.toggleWidget}
+                        toggleWidget={toggleWidget}
+                        handleSwitch={this.handleSwitchOnOff}
                     />
                 </div>
             </div>
