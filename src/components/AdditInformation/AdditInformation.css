@@ -1,0 +1,70 @@
+.addit-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 200px;
+  min-height: 200px;
+  margin: 5% 2%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.addit-container .title-box {
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.addit-container .title-box .title {
+  padding: 10px 20px;
+  color: #eee;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.addit-container .addit-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.addit-container .addit-info .addit-info_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2% 0;
+}
+
+.addit-container .addit-info .addit-info_box .addit-image {
+  width: 30px;
+  height: 30px;
+}
+
+.addit-container .addit-info .addit-info_box .addit-text {
+  color: #eee;
+}
+
+.addit-container .addit-info .addit-info_box .addit-text span {
+  font-weight: bold;
+}
+/*# sourceMappingURL=AdditInformation.css.map */

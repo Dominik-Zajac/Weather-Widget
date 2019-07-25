@@ -1,13 +1,14 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWind, } from '@fortawesome/free-solid-svg-icons';
+
 /* Styles */
 import './WindInformation.scss';
 
 const WindInformation = ({ weather }) => {
     return (
         <div className='wind-container'>
-            <div className='box-title'>
+            <div className='title-box'>
                 <span className='title'>Wind</span>
             </div>
             <FontAwesomeIcon

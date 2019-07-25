@@ -1,9 +1,9 @@
-.wind-container {
+.addit-container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-width: 180px;
-    min-height: 180px;
+    min-width: 200px;
+    min-height: 200px;
     margin: 5% 2%;
     border-radius: 10px;
     background-color: rgba(0, 0, 0, 0.3);
@@ -24,21 +24,28 @@
         }
     }
 
-    .wind-icon {
-        font-size: 5rem;
-        color: #eee;
-    }
-
-    .wind-info_box {
+    .addit-info {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 10px 0;
-        color: #eee;
+        align-items: flex-start;
+        flex-direction: column;
 
-        .wind-direction {
-            width: 30px;
-            height: 30px;
+        .addit-info_box {
+            display: flex;
+            align-items: center;
+            margin: 2% 0;
+
+            .addit-image {
+                width: 30px;
+                height: 30px;
+            }
+
+            .addit-text {
+                color: #eee;
+
+                span {
+                    font-weight: bold;
+                }
+            }
         }
     }
 }

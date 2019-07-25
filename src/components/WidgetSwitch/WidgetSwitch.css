@@ -1,0 +1,55 @@
+.box-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  right: -55px;
+  color: white;
+  text-align: center;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  border-width: 2px;
+  border-style: solid;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: #14111c;
+  border-color: -moz-linear-gradient(top, #14111c 0%, #6c6d4d 94%, #6c6d4d 100%);
+  border-color: -webkit-gradient(left top, left bottom, color-stop(0%, #14111c), color-stop(94%, #6c6d4d), color-stop(100%, #6c6d4d));
+  border-color: -webkit-linear-gradient(top, #14111c 0%, #6c6d4d 94%, #6c6d4d 100%);
+  border-color: -o-linear-gradient(top, #14111c 0%, #6c6d4d 94%, #6c6d4d 100%);
+  border-color: -ms-linear-gradient(top, #14111c 0%, #6c6d4d 94%, #6c6d4d 100%);
+  border-color: linear-gradient(to bottom, #14111c 0%, #6c6d4d 94%, #6c6d4d 100%);
+}
+
+.box-switch .icon {
+  margin: 10px 0;
+  padding: 10px 10px;
+  font-size: 25px;
+}
+
+.box-switch .icon:first-child {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.box-switch .icon:first-child:hover {
+  opacity: 1;
+}
+
+.box-switch .icon:nth-child(2) {
+  color: #ffe168;
+}
+
+.box-switch .icon:nth-child(3) {
+  color: #d9d9d9;
+}
+/*# sourceMappingURL=WidgetSwitch.css.map */
