@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Spinner from 'react-spinkit';
 
 /* Components */
 import Weather from '../Weather/Weather';
@@ -19,7 +20,7 @@ class App extends Component {
     }
 
     componentDidMount() {
-        fetch(`http://dev-weather-api.azurewebsites.net/api/city/${this.state.actualCity}/weather?date=${this.state.actualDate}`)
+        fetch(`http://dev-weat/her-api.azurewebsites.net/api/city/${this.state.actualCity}/weather?date=${this.state.actualDate}`)
             .then(res => {
                 if (res.ok) {
                     return res;
@@ -37,8 +38,6 @@ class App extends Component {
                     error,
                 }))
             })
-            console.log(this.state.actualDate)
-
     };
 
     handleSwitchOnOff = () => {
@@ -49,14 +48,15 @@ class App extends Component {
     };
 
     render() {
-        const { toggleWidget } = this.state;
+        const { toggleWidget, isLoading } = this.state;
         return (
             <div className='app'>
                 <h1>Weather</h1>
                 <div className={`container-weather ${toggleWidget && 'open-container'}`}>
-                    <Weather 
-                        isLoading={this.state.isLoading}
-                    />
+                    {isLoading ? 
+                        <Spinner name='ball-spin-fade-loader' className='spinner'/> : 
+                        <Weather />
+                    }
                     <WidgetSwitch
                         toggleWidget={toggleWidget}
                         handleSwitch={this.handleSwitchOnOff}
@@ -64,7 +64,7 @@ class App extends Component {
                 </div>
             </div>
         );
-    }
+    };
 };
 
 export default App;

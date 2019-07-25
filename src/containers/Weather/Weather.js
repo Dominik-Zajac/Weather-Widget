@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import Spinner from 'react-spinkit';
+
+/* Components */
+import MainInformation from '../../components/MainInformation/MainInformation';
+import AdditInformation from '../../components/AdditInformation/AdditInformation';
+import NextDays from '../../components/NextDays/NextDays';
 
 /* Styles */
 import './Weather.scss';
@@ -10,9 +14,12 @@ class Weather extends Component {
     render() {
         return (
             <div className='box-weather'>
-                {this.props.isLoading ? 
-                <Spinner name="ball-spin-fade-loader" className='spinner'/> : 
-                <h1>Weather</h1>}
+                <div>
+                    <MainInformation />
+                    <AdditInformation />
+                </div>
+
+                <NextDays />
             </div>            
         );
     };
