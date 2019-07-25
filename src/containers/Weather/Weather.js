@@ -12,15 +12,18 @@ class Weather extends Component {
     state = {
     }
     render() {
+        console.log(this.props.listDays)
         return (
             <div className='box-weather'>
                 <div>
                     <MainInformation />
                     <AdditInformation />
                 </div>
-
-                <NextDays />
-            </div>            
+                <NextDays
+                    weather={this.props.weather}
+                    listDays={this.props.listDays}
+                    />
+            </div>
         );
     };
 };
