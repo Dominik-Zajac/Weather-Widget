@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 /* Components */
 import MainInformation from '../../components/MainInformation/MainInformation';
 import AdditInformation from '../../components/AdditInformation/AdditInformation';
+import WindInformation from '../../components/WindInformation/WindInformation';
 import NextDays from '../../components/NextDays/NextDays';
 
 /* Styles */
@@ -12,14 +13,17 @@ class Weather extends Component {
     state = {}
 
     render() {
-        
-        const {weather, listDays, nameCity} = this.props;
+
+        const { weather, listDays, nameCity } = this.props;
 
         return (
             <div className='box-weather'>
-                <div>
+                <div className='box-information'>
                     <MainInformation />
                     <AdditInformation />
+                    <WindInformation
+                        weather={weather}
+                    />
                 </div>
                 <NextDays
                     weather={weather}

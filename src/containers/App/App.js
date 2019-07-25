@@ -12,7 +12,9 @@ class App extends Component {
     todayDate = new Date().toISOString().slice(0, 10);
 
     state = {
-        toggleWidget: false,
+        // toggleWidget: false,
+        toggleWidget: true,
+
         actualDate: this.todayDate,
         listDays: [],
         actualCity: 2,
