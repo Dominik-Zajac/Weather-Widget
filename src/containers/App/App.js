@@ -15,7 +15,8 @@ class App extends Component {
         toggleWidget: false,
         actualDate: this.todayDate,
         listDays: [],
-        actualCity: 1,
+        actualCity: 2,
+        nameCity: 'Katowice',
         weather: [],
         isLoading: true,
         error: null,
@@ -78,7 +79,7 @@ class App extends Component {
     };
 
     render() {
-        const { toggleWidget, isLoading, weather, listDays } = this.state;
+        const { toggleWidget, isLoading, weather, listDays, nameCity } = this.state;
         return (
             <div className='app'>
                 <h1>Weather</h1>
@@ -88,6 +89,7 @@ class App extends Component {
                         <Weather
                             weather={weather}
                             listDays={listDays}
+                            nameCity={nameCity}
                         />
                     }
                     <WidgetSwitch

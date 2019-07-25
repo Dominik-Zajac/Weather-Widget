@@ -1,10 +1,27 @@
 import React from 'react';
 
-const NextDays = (props) => {
+/* Components */
+import ShowDays from './ShowDays/ShowDays';
+import ShowWeather from './ShowWeather/ShowWeather';
 
+/* Styles */
+import './NextDays.scss';
+
+const NextDays = ({weather, listDays, nameCity}) => {
     return (
-        <h1>NextDays</h1>
+        <div className='container-days'>
+            <div className='box-title'>
+                <span className='title'>{nameCity}</span>
+            </div>
+            <ShowDays
+                weather={weather}
+                listDays={listDays}
+            />
+            <ShowWeather
+                weather={weather}
+            />
+        </div>
     );
-}
+};
 
 export default NextDays;

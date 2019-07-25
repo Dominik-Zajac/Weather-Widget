@@ -9,10 +9,12 @@ import NextDays from '../../components/NextDays/NextDays';
 import './Weather.scss';
 
 class Weather extends Component {
-    state = {
-    }
+    state = {}
+
     render() {
-        console.log(this.props.listDays)
+        
+        const {weather, listDays, nameCity} = this.props;
+
         return (
             <div className='box-weather'>
                 <div>
@@ -20,9 +22,10 @@ class Weather extends Component {
                     <AdditInformation />
                 </div>
                 <NextDays
-                    weather={this.props.weather}
-                    listDays={this.props.listDays}
-                    />
+                    weather={weather}
+                    listDays={listDays}
+                    nameCity={nameCity}
+                />
             </div>
         );
     };
