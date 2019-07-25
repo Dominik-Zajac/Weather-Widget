@@ -1,11 +1,28 @@
 import React from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWind, } from '@fortawesome/free-solid-svg-icons';
 /* Styles */
 import './WindInformation.scss';
 
-const WindInformation = () => {
+const WindInformation = ({ weather }) => {
     return (
-        <h1>Wind</h1>
+        <div className='wind-container'>
+            <div className='box-title'>
+                <span className='title'>Wind</span>
+            </div>
+            <FontAwesomeIcon
+                className='wind-icon'
+                icon={faWind}
+            />
+            <div className='wind-info_box' >
+                <img
+                    className='wind-direction'
+                    src={require(`../../images/WindDirections/${weather[0].windInfo.direction}.png`)}
+                    alt={weather[0].windInfo.direction}
+                />
+                <span> {weather[0].windInfo.speed}m/s</span>
+            </div>
+        </div>
     );
 };
 

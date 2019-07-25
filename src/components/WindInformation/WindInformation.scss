@@ -1,0 +1,42 @@
+.wind-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 150px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .box-title {
+        padding: 10px 0;
+        width: 100%;
+        text-align: left;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .title {
+            padding: 10px 20px;
+            color: #eee;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+
+    .wind-icon {
+        font-size: 5rem;
+        color: #eee;
+    }
+
+    .wind-info_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+        color: #eee;
+
+        .wind-direction {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
