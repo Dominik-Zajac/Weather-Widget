@@ -17,7 +17,7 @@ class App extends Component {
         toggleSelectCity: false,
         actualDate: this.todayDate,
         listDays: [],
-        actualCity: 2,
+        actualCity: 1,
         nameCity: 'Katowice',
         listCities: [],
         weather: [],
