@@ -14,7 +14,7 @@ class Weather extends Component {
 
     render() {
 
-        const { weather, listDays, nameCity } = this.props;
+        const { weather, listDays, nameCity, listCities, selectCity, toggleSelectCity, changeSelectCity } = this.props;
 
         return (
             <div className='box-weather'>
@@ -22,6 +22,11 @@ class Weather extends Component {
                     <MainInformation
                         weather={weather}
                         nameCity={nameCity}
+                        listDays={listDays}
+                        listCities={listCities}
+                        toggleSelectCity={toggleSelectCity}
+                        selectCity={selectCity}
+                        changeSelectCity={changeSelectCity}
                     />
                     <AdditInformation
                         weather={weather}

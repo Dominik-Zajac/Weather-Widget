@@ -5,7 +5,17 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 /* Styles */
 import './MainInformation.scss';
 
-const MainInformation = ({ weather, nameCity }) => {
+const MainInformation = ({ weather, nameCity, listDays, listCities, selectCity, toggleSelectCity, changeSelectCity }) => {
+
+    const date = new Date();
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const showMonth = months[date.getMonth()];
+    const showDay = date.getDate();
+    const showNameDay = listDays[0].slice(0, 3);
+    const buttonsCities = listCities.map(city => (
+        <button onClick={() => selectCity(city.id)}>{city.name}</button>
+    ));
+
     return (
         <div className='main-container'>
             <div className='header'>
@@ -14,12 +24,16 @@ const MainInformation = ({ weather, nameCity }) => {
                     <FontAwesomeIcon
                         className='icon'
                         icon={faSearch}
+                        onClick={() => changeSelectCity()}
                     />
                 </div>
             </div>
-            <div className='main-info'>
+            <div className={toggleSelectCity ? 'select-city' : 'disable'}>
+                {buttonsCities}
+            </div>
+            <div className={toggleSelectCity ? 'disable' : 'main-info'}>
                 <h2 className='name-city'>{nameCity}</h2>
-                <p className='date'>FRI, 2019-07-26</p>
+                <p className='date'>{showNameDay}, {showMonth} {showDay}</p>
                 <div className='main-info_box'>
                     <img
                         src={require(`../../images/${weather[0].type}.png`)}

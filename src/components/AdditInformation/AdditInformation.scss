@@ -9,8 +9,9 @@
     background-color: rgba(0, 0, 0, 0.3);
 
     .title-box {
-        padding: 10px 0;
         width: 100%;
+        padding: 10px 0;
+        font-size: 1.2em;
         text-align: left;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -19,8 +20,8 @@
         .title {
             padding: 10px 20px;
             color: #eee;
-            text-transform: uppercase;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
     }
 
@@ -35,8 +36,8 @@
             margin: 2% 0;
 
             .addit-image {
-                width: 30px;
-                height: 30px;
+                width: 40px;
+                height: 40px;
             }
 
             .addit-text {

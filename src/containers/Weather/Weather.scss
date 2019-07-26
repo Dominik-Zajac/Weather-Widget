@@ -1,5 +1,6 @@
 .box-weather {
-    height: 200px;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,5 +8,8 @@
 
     .box-information {
         display: flex;
+        justify-content: center;
+        width: 80%;
+
     }
 }

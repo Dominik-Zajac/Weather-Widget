@@ -13,23 +13,52 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px 0;
+        font-size: 1.2em;
         width: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         background-color: rgba(0, 0, 0, 0.2);
 
         .title {
-            padding: 10px 20px;
+            padding: 0px 20px;
             color: #eee;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .icon {
-            padding: 10px 20px;
+            padding: 0 20px;
             color: #eee;
             cursor: pointer;
         }
+    }
+
+    .select-city {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        min-width: 200px;
+        min-height: 170px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        button {
+            width: 120px;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 6px;
+            font-size: 1.2em;
+
+            color: #eee;
+            border: none;
+            background-color: inherit;
+        }
+    }
+
+    .disable {
+        display: none;
     }
 
     .main-info {
@@ -58,7 +87,7 @@
             margin-bottom: 20px;
 
             .main-text {
-                margin: 0;
+                margin: 0 5px;
                 display: flex;
                 height: 50px;
                 padding: 0;

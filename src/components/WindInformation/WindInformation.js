@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWind, } from '@fortawesome/free-solid-svg-icons';
+import { faWind } from '@fortawesome/free-solid-svg-icons';
 
 /* Styles */
 import './WindInformation.scss';
@@ -18,7 +18,7 @@ const WindInformation = ({ weather }) => {
             <div className='wind-info_box' >
                 <img
                     className='wind-direction'
-                    src={require(`../../images/WindDirections/${weather[0].windInfo.direction}.png`)}
+                    src={require(`../../images/WindDirections/${weather[0].windInfo.direction}.svg`)}
                     alt={weather[0].windInfo.direction}
                 />
                 <span> {weather[0].windInfo.speed}m/s</span>

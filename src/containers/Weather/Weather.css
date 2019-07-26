@@ -1,5 +1,6 @@
 .box-weather {
-  height: 200px;
+  height: 100%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,5 +20,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
 }
 /*# sourceMappingURL=Weather.css.map */

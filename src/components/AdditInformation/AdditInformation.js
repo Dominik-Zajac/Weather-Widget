@@ -13,7 +13,7 @@ const AdditInformation = ({ weather }) => {
                 <div className='addit-info_box'>
                     <img
                         className='addit-image'
-                        src={require(`../../images/AdditInfo/precipitation.png`)}
+                        src={require(`../../images/AdditInfo/precipitation.svg`)}
                         alt={weather[0].windInfo.direction}
                     />
                     <p className='addit-text'>Precipitation: <span>{weather[0].precipitation}%</span></p>
@@ -21,7 +21,7 @@ const AdditInformation = ({ weather }) => {
                 <div className='addit-info_box'>
                     <img
                         className='addit-image'
-                        src={require(`../../images/AdditInfo/humidity.png`)}
+                        src={require(`../../images/AdditInfo/humidity.svg`)}
                         alt={weather[0].windInfo.direction}
                     />
                     <p className='addit-text'>Humidity: <span>{weather[0].humidity}%</span></p>
@@ -29,7 +29,7 @@ const AdditInformation = ({ weather }) => {
                 <div className='addit-info_box'>
                     <img
                         className='addit-image'
-                        src={require(`../../images/AdditInfo/pollen-count.png`)}
+                        src={require(`../../images/AdditInfo/pollen-count.svg`)}
                         alt={weather[0].windInfo.direction}
                     />
                     <p className='addit-text'>Pollen Count: <span>{weather[0].pollenCount}</span></p>

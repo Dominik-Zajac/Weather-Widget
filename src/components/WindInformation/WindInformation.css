@@ -9,8 +9,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  min-width: 180px;
-  min-height: 180px;
+  min-width: 200px;
+  min-height: 200px;
   margin: 5% 2%;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.3);
@@ -20,6 +20,7 @@
   padding: 10px 0;
   width: 100%;
   text-align: left;
+  font-size: 1.2em;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: rgba(0, 0, 0, 0.2);
@@ -33,6 +34,7 @@
 }
 
 .wind-container .wind-icon {
+  margin-top: 20px;
   font-size: 5rem;
   color: #eee;
 }
@@ -47,12 +49,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 10px 0;
+  margin: 10px 20px 10px 0;
   color: #eee;
 }
 
 .wind-container .wind-info_box .wind-direction {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+.wind-container .wind-info_box span {
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=WindInformation.css.map */
