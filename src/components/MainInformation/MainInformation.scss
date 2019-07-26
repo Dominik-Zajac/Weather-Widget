@@ -1,0 +1,76 @@
+.main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 5% 2%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .title {
+            padding: 10px 20px;
+            color: #eee;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .icon {
+            padding: 10px 20px;
+            color: #eee;
+            cursor: pointer;
+        }
+    }
+
+    .main-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 70%;
+
+        .name-city {
+            font-size: 1.5rem;
+            color: #eee;
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        .date {
+            font-size: 1rem;
+            color: #eee;
+        }
+
+        &_box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .main-text {
+                margin: 0;
+                display: flex;
+                height: 50px;
+                padding: 0;
+                font-size: 3rem;
+                color: #eee;
+
+                span {
+                    align-self: flex-start;
+                    margin-top: 5px;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

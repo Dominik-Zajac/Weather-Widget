@@ -19,7 +19,10 @@ class Weather extends Component {
         return (
             <div className='box-weather'>
                 <div className='box-information'>
-                    <MainInformation />
+                    <MainInformation
+                        weather={weather}
+                        nameCity={nameCity}
+                    />
                     <AdditInformation
                         weather={weather}
                     />
