@@ -1,8 +1,11 @@
+@import '../../../shared/_variables';
+@import '../../../shared/_mixins';
+
 .weather-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10px 15px 10px;
+    margin: 0 10px 15px;
 
     .weather-day {
         display: flex;
@@ -11,14 +14,13 @@
         padding: 0 5px;
 
         .spinner-circle {
-            width: 48px;
-            height: 48px;
-            color: #eee;
+            @include size(48px, 48px);
+
+            color: $main-color;
         }
 
         .degrees {
-            color: #eee;
-
+            color: $main-color;
         }
     }
 }

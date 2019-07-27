@@ -1,3 +1,6 @@
+@import '../../shared/_variables';
+@import '../../shared/_mixins';
+
 .wind-container {
     display: flex;
     align-items: center;
@@ -5,21 +8,21 @@
     min-width: 200px;
     min-height: 200px;
     margin: 5% 2%;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: $border-radius;
+    background-color: $background-box;
 
     .title-box {
-        padding: 10px 0;
         width: 100%;
-        text-align: left;
+        padding: 10px 0;
         font-size: 1.2em;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.2);
+        text-align: left;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        background-color: $background-title;
 
         .title {
             padding: 10px 20px;
-            color: #eee;
+            color: $main-color;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -28,7 +31,7 @@
     .wind-icon {
         margin-top: 20px;
         font-size: 5rem;
-        color: #eee;
+        color: $main-color;
     }
 
     .wind-info_box {
@@ -36,11 +39,10 @@
         align-items: center;
         justify-content: center;
         margin: 10px 20px 10px 0;
-        color: #eee;
+        color: $main-color;
 
         .wind-direction {
-            width: 50px;
-            height: 50px;
+            @include size(50px, 50px);
         }
 
         span {

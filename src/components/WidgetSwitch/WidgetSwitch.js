@@ -9,16 +9,17 @@ const WidgetSwitch = ({ toggleWidget, handleSwitch }) => {
     return (
         <div className='box-switch'>
             <FontAwesomeIcon
-                className='icon'
+                className='icon-switch'
+                // On/Off widget
                 icon={toggleWidget ? faArrowLeft : faArrowRight}
                 onClick={handleSwitch}
             />
             <FontAwesomeIcon
-                className='icon'
+                className='icon-switch'
                 icon={faSun}
             />
             <FontAwesomeIcon
-                className='icon'
+                className='icon-switch'
                 icon={faCloud}
             />
         </div>

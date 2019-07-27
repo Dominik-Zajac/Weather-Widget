@@ -9,18 +9,18 @@ import WidgetSwitch from '../../components/WidgetSwitch/WidgetSwitch';
 import './App.scss';
 
 class App extends Component {
+
     todayDate = new Date().toISOString().slice(0, 10);
 
     state = {
-        // toggleWidget: false,
-        toggleWidget: true,
+        toggleWidget: false,
         toggleSelectCity: false,
         actualDate: this.todayDate,
         listDays: [],
-        actualCity: 1,
-        nameCity: 'Katowice',
         listCities: [],
         weather: [],
+        actualCity: 1,
+        nameCity: 'Katowice',
         isLoading: true,
         error: null,
     }
@@ -48,17 +48,17 @@ class App extends Component {
 
         /* ----------------------------------------*/
 
-
+        /* Data downloading */
         Promise.all([
             fetch(`http://dev-weather-api.azurewebsites.net/api/city/${this.state.actualCity}/weather?date=${this.state.actualDate}`),
             fetch(`http://dev-weather-api.azurewebsites.net/api/city/`)
         ])
-            // .then(([res1, res2]) => {
-            //     if (res1.ok && res2.ok) {
-            //         return res1;
-            //     }
-            //     throw Error('Not work');
-            // })
+            .then(([res1, res2]) => {
+                if (res1.ok && res2.ok) {
+                    return Promise.all([res1, res2])
+                }
+                throw Error('Not work');
+            })
             .then(([resFirst, resSecond]) => Promise.all([resFirst.json(), resSecond.json()]))
             .then(([dataFirst, dataSecond]) => {
 
@@ -66,15 +66,17 @@ class App extends Component {
                     isLoading: false,
                     weather: dataFirst,
                     listCities: dataSecond
-                })
+                });
             })
             .catch(error => {
                 this.setState(prevState => ({
                     error,
-                }))
+                }));
             })
+        /* ----------------------------------------*/
     };
 
+    // Change of the city
     handleSelectCity = (id) => {
         const nameCity = this.state.listCities[id - 1].name;
 
@@ -84,31 +86,35 @@ class App extends Component {
             toggleSelectCity: !this.state.toggleSelectCity
         });
     };
+
+    // Selected city
     handleChangeCity = () => {
         this.setState({
             toggleSelectCity: !this.state.toggleSelectCity
-        })
-    }
+        });
+    };
 
+    // Open/close side panel
     handleSwitchOnOff = () => {
-
         this.setState({
             toggleWidget: !this.state.toggleWidget
         });
     };
 
+    // View update after city change
     componentDidUpdate(prevProps, prevState) {
         if (prevState.actualCity !== this.state.actualCity) {
             this.componentDidMount();
         }
-    }
+    };
 
     render() {
-        const { toggleWidget, isLoading, weather, listDays, nameCity, listCities, toggleSelectCity } = this.state;
+        const { toggleWidget, isLoading, weather, listDays, nameCity, listCities,
+            toggleSelectCity } = this.state;
         return (
             <div className='app'>
                 <h1>Weather</h1>
-                <div className={`container-weather ${toggleWidget && 'open-container'}`}>
+                <div className={`weather-container ${toggleWidget && 'open-container'}`}>
                     {isLoading ?
                         <Spinner name='ball-spin-fade-loader' className='spinner' /> :
                         <Weather

@@ -1,23 +1,25 @@
-.container-days {
+@import '../../shared/_variables';
+
+
+.days-container {
     display: flex;
     flex-direction: column;
-    min-width: 650px;
     width: 70%;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.3);
+    min-width: 650px;
     margin-bottom: 5%;
+    border-radius: $border-radius;
+    background-color: $background-box;
 
-
-    .box-title {
+    .title-box {
         padding: 10px 0;
         text-align: left;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.2);
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        background-color: $background-title;
 
         .title {
             padding: 10px 20px;
-            color: #eee;
+            color: $main-color;
             text-transform: uppercase;
             letter-spacing: 1px;
         }

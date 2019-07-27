@@ -7,10 +7,10 @@ import ShowWeather from './ShowWeather/ShowWeather';
 /* Styles */
 import './NextDays.scss';
 
-const NextDays = ({weather, listDays, nameCity}) => {
+const NextDays = ({ weather, listDays, nameCity }) => {
     return (
-        <div className='container-days'>
-            <div className='box-title'>
+        <div className='days-container'>
+            <div className='title-box'>
                 <span className='title'>{nameCity}</span>
             </div>
             <ShowDays

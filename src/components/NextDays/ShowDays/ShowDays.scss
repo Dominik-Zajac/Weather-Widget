@@ -1,3 +1,5 @@
+@import '../../../shared/_variables';
+
 .days-row {
     display: flex;
     align-items: center;
@@ -11,11 +13,11 @@
         padding: 0 5px;
 
         &_title {
-            color: #eee;
             font-size: 15px;
+            font-weight: 400;
+            color: $main-color;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-weight: 400;
             line-height: 0;
         }
     }
