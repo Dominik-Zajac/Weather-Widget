@@ -113,7 +113,7 @@ class App extends Component {
             toggleSelectCity } = this.state;
         return (
             <div className='app'>
-                <h1>Weather</h1>
+                <h1 className='title-app'>Weather</h1>
                 <div className={`weather-container ${toggleWidget && 'open-container'}`}>
                     {isLoading ?
                         <Spinner name='ball-spin-fade-loader' className='spinner' /> :

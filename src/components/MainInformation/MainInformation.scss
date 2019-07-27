@@ -78,7 +78,7 @@
 
         .date {
             font-size: 1rem;
-            color: #eee;
+            color: $main-color;
         }
 
         &_box {
@@ -101,6 +101,18 @@
                     font-size: 1rem;
                 }
             }
+        }
+    }
+}
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (min-width: 577px) and (max-width: 768px) {
+    .main-container {
+        .select-city {
+            min-width: 230px;
         }
     }
 }

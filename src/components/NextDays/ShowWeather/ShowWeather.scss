@@ -24,3 +24,27 @@
         }
     }
 }
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (max-width: 768px) {
+    .weather-row {
+        .display-weather_day {
+            display: none;
+        }
+
+        .weather-day {
+            img {
+                @include size(35px, 35px);
+
+                margin: 5px 0;
+            }
+
+            .spinner-circle {
+                @include size(35px, 35px);
+            }
+        }
+    }
+}

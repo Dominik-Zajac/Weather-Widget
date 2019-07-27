@@ -14,3 +14,15 @@
         width: 80%;
     }
 }
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (max-width: 768px) {
+    .box-weather {
+        .box-information {
+            flex-direction: column;
+        }
+    }
+}

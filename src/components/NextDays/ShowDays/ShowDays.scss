@@ -22,3 +22,15 @@
         }
     }
 }
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (max-width: 768px) {
+    .days-row {
+        .display-day {
+            display: none;
+        }
+    }
+}

@@ -25,3 +25,14 @@
         }
     }
 }
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (max-width: 768px) {
+    .days-container {
+        width: 230px;
+        min-width: 200px;
+    }
+}

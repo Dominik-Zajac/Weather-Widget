@@ -8,7 +8,7 @@ const ShowDays = ({ listDays }) => {
     // Creating next days
     const showDays = listDays.map((day, index) => {
         if (index === 0) {
-            return <div className='one-day' key={day}>
+            return <div className='one-day display-day' key={day}>
                 <h2 className='one-day_title'>Today</h2>
             </div>
         } else {

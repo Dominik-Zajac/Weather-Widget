@@ -18,18 +18,28 @@ const ShowWeather = ({ weather }) => {
 
     // Creating next days with weather
     const showWeather = weatherArray.map((day, index) => {
-        if (day === null) {
-            return <div className='weather-day' key={index}>
-                <Spinner name='circle' className='spinner-circle' />
-            </div>
-        } else {
-            return <div className='weather-day' key={index}>
+        if (index === 0) {
+            return <div className='weather-day display-weather_day' key={index}>
                 <img
                     src={require(`../../../images/${day.type}.png`)}
                     alt={day.type}
                 />
                 <span className='degrees'>{day.temperature}°C</span>
             </div>
+        } else {
+            if (day === null) {
+                return <div className='weather-day' key={index}>
+                    <Spinner name='circle' className='spinner-circle' />
+                </div>
+            } else {
+                return <div className='weather-day' key={index}>
+                    <img
+                        src={require(`../../../images/${day.type}.png`)}
+                        alt={day.type}
+                    />
+                    <span className='degrees'>{day.temperature}°C</span>
+                </div>
+            }
         }
     });
 
