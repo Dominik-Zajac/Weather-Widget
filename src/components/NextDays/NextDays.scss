@@ -1,0 +1,38 @@
+@import '../../shared/_variables';
+
+
+.days-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    min-width: 650px;
+    margin-bottom: 5%;
+    border-radius: $border-radius;
+    background-color: $background-box;
+
+    .title-box {
+        padding: 10px 0;
+        text-align: left;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        background-color: $background-title;
+
+        .title {
+            padding: 10px 20px;
+            color: $main-color;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (max-width: 768px) {
+    .days-container {
+        width: 230px;
+        min-width: 200px;
+    }
+}

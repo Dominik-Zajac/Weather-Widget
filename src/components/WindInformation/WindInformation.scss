@@ -1,0 +1,52 @@
+@import '../../shared/_variables';
+@import '../../shared/_mixins';
+
+.wind-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 5% 2%;
+    border-radius: $border-radius;
+    background-color: $background-box;
+
+    .title-box {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1.2em;
+        text-align: left;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        background-color: $background-title;
+
+        .title {
+            padding: 10px 20px;
+            color: $main-color;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+
+    .wind-icon {
+        margin-top: 20px;
+        font-size: 5rem;
+        color: $main-color;
+    }
+
+    .wind-info_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 20px 10px 0;
+        color: $main-color;
+
+        .wind-direction {
+            @include size(50px, 50px);
+        }
+
+        span {
+            font-size: 1.5rem;
+        }
+    }
+}

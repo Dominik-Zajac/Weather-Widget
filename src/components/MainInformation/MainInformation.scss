@@ -1,0 +1,118 @@
+@import '../../shared/_variables';
+@import '../../shared/_mixins';
+
+.main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: 200px;
+    min-height: 200px;
+    margin: 5% 2%;
+    border-radius: $border-radius;
+    background-color: $background-box;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        font-size: 1.2em;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+        background-color: $background-title;
+
+        .title {
+            padding: 0px 20px;
+            color: $main-color;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .icon {
+            padding: 0 20px;
+            color: $main-color;
+            cursor: pointer;
+        }
+    }
+
+    .select-city {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        min-width: 200px;
+        min-height: 170px;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        background-color: $background-box;
+
+        button {
+            width: 120px;
+            padding: 6px;
+            color: $main-color;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: $border-radius;
+            background-color: inherit;
+        }
+    }
+
+    .disable {
+        display: none;
+    }
+
+    .main-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 70%;
+
+        .name-city {
+            margin: 20px 0 0;
+            font-size: 1.5rem;
+            color: $main-color;
+        }
+
+        .date {
+            font-size: 1rem;
+            color: $main-color;
+        }
+
+        &_box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .main-text {
+                @include spacing(0 5px, 0);
+
+                display: flex;
+                height: 50px;
+                font-size: 3rem;
+                color: $main-color;
+
+                span {
+                    align-self: flex-start;
+                    margin-top: 5px;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (min-width: 577px) and (max-width: 768px) {
+    .main-container {
+        .select-city {
+            min-width: 230px;
+        }
+    }
+}

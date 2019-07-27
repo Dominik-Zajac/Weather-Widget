@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+
+/* Components */
+import App from './containers/App/App';
+
+/* Styles */
+import './index.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

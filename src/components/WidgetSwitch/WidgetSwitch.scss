@@ -1,0 +1,61 @@
+@import '../../shared/_variables';
+@import '../../shared/_mixins';
+
+.box-switch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -55px;
+    text-align: center;
+    transition: .3s ease-in-out;
+
+    border-width: 2px;
+    border-style: solid;
+    border-top-right-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+
+    border-color: rgba(20, 17, 28, 1);
+    background: rgba(20, 17, 28, 1);
+    background: -moz-linear-gradient(top, rgba(20, 17, 28, 1) 5%, rgba(103, 104, 74, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(20, 17, 28, 1) 5%, rgba(103, 104, 74, 1) 100%);
+    background: -o-linear-gradient(top, rgba(20, 17, 28, 1) 5%, rgba(103, 104, 74, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(20, 17, 28, 1) 5%, rgba(103, 104, 74, 1) 100%);
+    background: linear-gradient(to bottom, rgba(20, 17, 28, 1) 5%, rgba(103, 104, 74, 1) 100%);
+
+    .icon-switch {
+        @include spacing(10px 0, 10px 10px);
+
+        font-size: 25px;
+
+        &:first-child {
+            opacity: 0.8;
+            cursor: pointer;
+            color: $main-color;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &:nth-child(2) {
+            color: #ffe168;
+        }
+
+        &:nth-child(3) {
+            color: #47a6b8;
+        }
+    }
+}
+
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (max-width: 768px) {
+    .box-switch {
+        background: linear-gradient(to bottom, rgba(20, 17, 28, 1) 5%, rgb(68, 68, 55) 100%);
+    }
+}

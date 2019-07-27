@@ -1,0 +1,50 @@
+@import '../../../shared/_variables';
+@import '../../../shared/_mixins';
+
+.weather-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px 15px;
+
+    .weather-day {
+        display: flex;
+        flex-direction: column;
+        width: 50px;
+        padding: 0 5px;
+
+        .spinner-circle {
+            @include size(48px, 48px);
+
+            color: $main-color;
+        }
+
+        .degrees {
+            color: $main-color;
+        }
+    }
+}
+
+/* Media queries */
+//
+// ~~ 768px ~~
+//
+@media (max-width: 768px) {
+    .weather-row {
+        .display-weather_day {
+            display: none;
+        }
+
+        .weather-day {
+            img {
+                @include size(35px, 35px);
+
+                margin: 5px 0;
+            }
+
+            .spinner-circle {
+                @include size(35px, 35px);
+            }
+        }
+    }
+}
